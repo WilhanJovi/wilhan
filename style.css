@@ -1,0 +1,309 @@
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  /* transisi */
+  scroll-behavior: smooth;
+}
+
+header nav {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  background-color: purple;
+  justify-content: space-evenly;
+}
+
+/* efek */
+header nav ul ::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+}
+
+header nav a:hover::after {
+  width: 100%;
+  transition: width 0.5s;
+}
+
+/* setting logo */
+
+.logo {
+  width: 70%;
+  margin: auto;
+  margin-left: 30px;
+}
+
+/* setting ul */
+
+ul {
+  width: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 150px;
+  list-style: none;
+}
+
+ul a {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 17px;
+}
+
+/* jumbotron */
+
+.jumbotron {
+  position: relative;
+  /*gambar*/
+  background-image: url(images/bg1-01.jpg);
+  height: 700px;
+  /*background fixed*/
+  background-attachment: fixed;
+}
+
+.jumbotron h1,
+h4 {
+  text-align: center;
+  color: white;
+}
+
+.jumbotron h1 {
+  font-size: 65px;
+}
+
+.jumbotron h4 {
+  font-size: 20px;
+}
+
+.intro {
+  background-color: purple;
+  text-align: center;
+  color: white;
+  padding: 90px;
+  text-align-last: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.garis {
+  width: 100px;
+  height: 5px;
+  background: purple;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.border-1 {
+  display: flex;
+  width: 80%;
+  height: 550px;
+  margin: 20px auto;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+.border-2,
+h3,
+p {
+  margin: 20px;
+  text-align: center;
+  font-weight: 350;
+  font-weight: lighter;
+}
+
+.picture {
+  position: relative;
+  transition: 1s;
+}
+
+.picture img:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.testimoni {
+  background-color: purple;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  text-align-last: center;
+  margin-top: 20px;
+}
+
+.garis-testi {
+  width: 100px;
+  height: 5px;
+  background: white;
+  margin-top: 10px;
+}
+
+.hubungi {
+  background-image: url(images/bg1-01.png);
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position-y: -150px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.hubungi h1 {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+
+.hubungi button {
+  padding: 10px 60px;
+  border: 2px solid white;
+  color: white;
+  background: transparent;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.hubungi button:hover {
+  color: dodgerblue;
+  background: white;
+}
+
+.tentangkami h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.tentangkami h4 {
+  text-align: center;
+  margin-top: 20px;
+  color: black;
+}
+
+.tentangkami hr {
+  width: 200px;
+  height: 2px;
+  margin: auto;
+}
+
+.tentangkami {
+  width: 500px;
+  margin: 70px auto;
+}
+
+.tentangkami img {
+  margin-top: 30px;
+  border-radius: 100%;
+  box-shadow: 0 0 40px rgba(26, 152, 211, 0);
+  color: #2b50b4;
+}
+
+.email {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+
+/*toogle */
+.menu-toogle {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  margin-top: 20px;
+  justify-content: space-between;
+  opacity: 0;
+}
+
+.menu-toogle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+}
+
+.footer {
+  width: 100%;
+  height: 90px;
+  background: purple;
+}
+
+/* responsive */
+@media screen and (max-width: 576px) {
+  body {
+    overflow-x: hidden;
+  }
+  .menu-toogle {
+    opacity: 1;
+    cursor: pointer;
+    margin-right: 40px;
+  }
+
+  .menu-toogle:hover {
+    box-shadow: 0 0 40px rgba (0, 0, 0, 0, 5);
+  }
+
+  nav ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 80%;
+    height: 100vh;
+    flex-direction: column;
+    background: green;
+    margin-top: 70px;
+    text-align: center;
+    transform: translateX(350px);
+    transition: 0.8s;
+    opacity: 0;
+  }
+
+  nav ul.aktif {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  nav .logo {
+    transform: translateX(-60px);
+    margin-left: 80px;
+    margin-bottom: 7px;
+  }
+
+  .jumbotron {
+    margin-top: -30px;
+    width: 100%;
+    background-size: cover;
+    height: 300px;
+  }
+
+  .selogan {
+    padding: 20px;
+    text-align-last: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .bgatas {
+    display: none;
+  }
+
+  .intro p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .border-1 {
+    margin-top: 30px;
+    width: 60%;
+    height: 1500px;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
