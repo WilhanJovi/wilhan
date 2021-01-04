@@ -121,7 +121,7 @@ function displayIsInClientInfo() {
     if (liff.isInClient()) {
         document.getElementById('liffLoginButton').classList.toggle('hidden');
         document.getElementById('liffLogoutButton').classList.toggle('hidden');
-        document.getElementById('isInClientMessage').textContent = 'Kakak lagi buka appnya di browser LINE.';
+        document.getElementById('isInClientMessage').textContent = 'Kakak lagi buka app ini di browser LINE.';
     } else {
         document.getElementById('isInClientMessage').textContent = 'Kakak lagi buka app ini di browser eksternal.';
         document.getElementById('openWindowButton').style.visibility= "hidden";
