@@ -121,16 +121,17 @@ function displayIsInClientInfo() {
     if (liff.isInClient()) {
         document.getElementById('liffLoginButton').classList.toggle('hidden');
         document.getElementById('liffLogoutButton').classList.toggle('hidden');
-        document.getElementById('isInClientMessage').textContent = 'You are opening the app in the in-app browser of LINE.';
+        document.getElementById('isInClientMessage').textContent = 'Kakak lagi buka appnya di browser LINE.';
     } else {
-        document.getElementById('isInClientMessage').textContent = 'You are opening the app in an external browser.';
+        document.getElementById('isInClientMessage').textContent = 'Kakak lagi buka app ini di browser eksternal.';
         document.getElementById('openWindowButton').style.visibility= "hidden";
     }
 }
 
 
 function registerButtonHandlers() {
-    // Kode ini menjelaskan apabila kita klik tombol open window, maka method liff.openWindow() akan dijalankan. Ganti parameter url dengan Endpoint URL aplikasi web yang sudah Anda deploy di Heroku atau lainnya. Sedangkan jika parameter external diisi dengan nilai true maka URL di jalankan pada external browser. Namun, jika diisi dengan nilai false maka URL akan dibuka pada browser LINE.
+    // Kode ini menjelaskan apabila kita klik tombol open window, maka method liff.openWindow() akan dijalankan. Ganti parameter url dengan Endpoint URL aplikasi web yang sudah Anda deploy di Heroku atau lainnya. Sedangkan jika parameter external diisi dengan nilai true maka URL di jalankan pada 
+    . Namun, jika diisi dengan nilai false maka URL akan dibuka pada browser LINE.
     document.getElementById('openWindowButton').addEventListener('click', function() {
         liff.openWindow({
             url: 'https://wilhanjovi.github.io/wilhan/miyamku/', // Isi dengan Endpoint URL aplikasi web Anda
@@ -201,7 +202,7 @@ function ExampleSendMessage(_text){
 
 // Function sendAlertIfNotInClient berguna untuk menampilkan pesan di layar yang menandakan aplikasi LIFF tidak mendukung eksternal browser. Sedangkan function toggleElement digunakan untuk beralih dari satu elemen ke elemen yang lainnya.
 function sendAlertIfNotInClient() {
-    alert('This button is unavailable as LIFF is currently being opened in an external browser.');
+    alert('Fungsi ini hanya bisa kakak gunakan dengan menggunakan LINE di smartphone');
 }
 
 /**
