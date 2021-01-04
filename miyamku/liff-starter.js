@@ -1,3 +1,4 @@
+var picturePP;
 var namaLine;
 window.onload = function() {
     const useNodeJS = false;   // if you are not using a node server, set this value to false
@@ -77,7 +78,9 @@ function initializeApp() {
         // document.getElementById('page-main').style.visibility= "hidden";
         liff.getProfile() 
         .then(profile => {
+            picturePP = profile.PictureURL;
             namaLine = profile.displayName;
+            document.getElementById('picturePP');
             document.getElementById("welcome").innerHTML = `halo ${namaLine}, silahkan pilih menu `;
         })
         .catch((err) => {
@@ -132,7 +135,7 @@ function registerButtonHandlers() {
     // Kode ini menjelaskan apabila kita klik tombol open window, maka method liff.openWindow() akan dijalankan. Ganti parameter url dengan Endpoint URL aplikasi web yang sudah Anda deploy di Heroku atau lainnya. Sedangkan jika parameter external diisi dengan nilai true maka URL di jalankan pada external browser. Namun, jika diisi dengan nilai false maka URL akan dibuka pada browser LINE.
     document.getElementById('openWindowButton').addEventListener('click', function() {
         liff.openWindow({
-            url: 'https://mojajan1.herokuapp.com/', // Isi dengan Endpoint URL aplikasi web Anda
+            url: 'https://wilhanjovi.github.io/miyamku', // Isi dengan Endpoint URL aplikasi web Anda
             external: true
         });
     });
