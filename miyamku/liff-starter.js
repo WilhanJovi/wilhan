@@ -96,7 +96,7 @@ function initializeApp() {
             picturePP = profile.PictureURL;
             namaLine = profile.displayName;
             document.getElementById('picturePP');
-            document.getElementById("welcome").innerHTML = `halo ${namaLine}, silahkan pilih menu `;
+            document.getElementById("welcome").innerHTML = `Halo Kak ${namaLine}, silahkan pilih menu `;
         })
         .catch((err) => {
           console.log('error', err);
