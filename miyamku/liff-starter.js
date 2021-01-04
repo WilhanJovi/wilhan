@@ -72,7 +72,7 @@ function initializeApp() {
  
     // check if the user is logged in/out, and disable inappropriate button
     if (liff.isLoggedIn()) { 
-        document.getElementById('liffLogoutButton').style.visibility= "hidden";
+        document.getElementById('liffLogoutButton').style.visibility= "visible";
         document.getElementById('liffLoginButton').style.visibility= "hidden";
         // document.getElementById('page-main').style.visibility= "hidden";
         liff.getProfile() 
@@ -172,7 +172,7 @@ function registerButtonHandlers() {
         } else {
             liff.sendMessages([{
                 'type': 'text',
-                'text': "Anda telah menggunakan fitur Send Message!"
+                'text': "Kakak telah menggunakan fitur Send Message!"
             }]).then(function() {
                 window.alert('Ini adalah pesan dari fitur Send Message');
             }).catch(function(error) {
