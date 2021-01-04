@@ -72,11 +72,12 @@ function initializeApp() {
  
     // check if the user is logged in/out, and disable inappropriate button
     if (liff.isLoggedIn()) { 
-        document.getElementById('liffLogoutButton').style.visibility= "visible";
+        document.getElementById('liffLogoutButton').style.visibility= "hidden";
         document.getElementById('liffLoginButton').style.visibility= "hidden";
         // document.getElementById('page-main').style.visibility= "hidden";
         liff.getProfile() 
         .then(profile => {
+            pictureURL = profile.pictureURL;
             namaLine = profile.displayName;
             document.getElementById("welcome").innerHTML = `halo ${namaLine}, silahkan pilih menu `;
         })
