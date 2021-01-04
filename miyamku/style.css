@@ -1,0 +1,42 @@
+.jumbotron {
+    position:bottom;
+    /*gambar*/
+    background-image: url(images/123.jpg);
+    height: 300px;
+    /*background fixed*/
+    background-attachment: fixed;
+}
+
+.display-3{
+    color: white;
+    text-shadow: 5px;
+}
+
+.lead{
+    color: white;
+    text-shadow: 5px; 
+}
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.buttonGroup {
+    position: relative;
+    top: 20px;
+}
+
+.colr{
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.TotalPesan{
+    font-size: 300px;
+}
+.statusMessage{
+    align-items: center;
+    text-align: center;
+}
