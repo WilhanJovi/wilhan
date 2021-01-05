@@ -30,7 +30,6 @@
       <div class="col" ng-controller="listContactCtrl">
         <div id="page-main" class="well">
             <br>
-            <img id="pictureUrl">
             <p id="welcome" >Login Terlebih Dahulu Sebelum Memesan</p>
       </div>
       </div>
@@ -152,7 +151,7 @@
             </div>
 
             <!--div class="colr"-->
-            <button id="sendMessageButton" class="btn btn-primary btn-small">Pesan Sekarang</button>
+            <!--button class="btn btn-primary btn-small"  class="confirm" onclick="handleConfirm('pm4')">Pesan Sekarang</button-->
             <!--/div-->
             </div>
             </div>
@@ -171,7 +170,7 @@
             <div class="buttonRow">
                 <!-- <button id="openWindowButton" class="btn btn-success btn-small">Open External Window</button> -->
                 <span id="closeWindowButton" ></span>
-                <!--<button id="sendMessageButton" class="btn btn-primary btn-small">Pesan Sekarang</button> -->
+                <button id="sendMessageButton" class="btn btn-primary btn-small">Pesan Sekarang</button>
             </div>
 
         </div>
@@ -497,22 +496,7 @@
     
     </script>
 
-    <script>
-        async function main(){
-            await liff.init({ liffId: "1655537264-qYjMWdwe"})
-            if (liff.isLoggedIn()){
-                getUserProfile()
-            } else {
-                liff.login()
-            }
-        }
-        main()
-
-        async function getUserProfile(){
-            const profile = await liff.getUserProfile()
-            document.getElementById("pictureUrl").src = profile.picturUrl
-        }
-    </script>
+    
 
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
