@@ -61,6 +61,7 @@ function initializeLiff(myLiffId) {
         });
 }
  
+
 /**
  * Initialize the app by calling functions handling individual app components
  * Function initializeApp di atas menjelaskan bahwa isLoggedIn akan menampilkan informasi pengguna serta mengecek apakah pengguna membuka aplikasi LIFF pada LINE atau eksternal browser. Apabila pengguna membuka aplikasi LIFF pada LINE maka tombol Login dan Logout tidak akan ditampilkan. Namun apabila melalui eksternal browser, maka tombol login dan logout akan ditampilkan.
@@ -77,8 +78,10 @@ function initializeApp() {
         // document.getElementById('page-main').style.visibility= "hidden";
         liff.getProfile() 
         .then(profile => {
+            picturepp = profile.pictureURL;
             namaLine = profile.displayName;
-            document.getElementById("welcome").innerHTML = `halo ${namaLine}, silahkan pilih menu `;
+            document.getElementById("picturepp");
+            document.getElementById("welcome").innerHTML = `Halo Kak ${namaLine}, silahkan pilih menu `;
         })
         .catch((err) => {
           console.log('error', err);
@@ -170,7 +173,7 @@ function registerButtonHandlers() {
         } else {
             liff.sendMessages([{
                 'type': 'text',
-                'text': "Terimkasih telah memesan"
+                'text': "Terimakasih ${namaLine}, sudah memesan "+_text
             }]).then(function() {
                 window.alert('Ini adalah pesan dari fitur Send Message');
             }).catch(function(error) {
@@ -215,6 +218,3 @@ function toggleElement(elementId) {
         elem.style.display = 'block';
     }
 }
-
-
-
