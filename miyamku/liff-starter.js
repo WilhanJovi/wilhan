@@ -170,7 +170,8 @@ function registerButtonHandlers() {
         } else {
             liff.sendMessages([{
                 'type': 'text',
-                'text': 'Hai' + profile.displayName + '\Total Pesanan anda adalah Rp \n' + TotalPesan,
+                'text': 'Hai' + profile.displayName + '\, Total Pesanan kakak adalah Rp \n' + TotalPesan;
+                document.getElementById("TotalPesan").innerText =TotPesan;
             }]).then(function() {
                 window.alert('Ini adalah pesan dari fitur Send Message');
             }).catch(function(error) {
