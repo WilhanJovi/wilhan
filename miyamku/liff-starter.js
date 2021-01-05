@@ -172,9 +172,8 @@ function registerButtonHandlers() {
             sendAlertIfNotInClient();
         } else {
             liff.sendMessages([{
-                const namaLine = profile.displayName;
                 'type': 'text',
-                'text': "Terimakasih Kak ${namaLine}, sudah memesan makanan Mie Ayam Kampus"
+                'text': "Terimakasih Kak sudah memesan makanan Mie Ayam Kampus"
             }]).then(function() {
                 window.alert('Terimakasih sudah memesan');
             }).catch(function(error) {
