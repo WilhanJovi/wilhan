@@ -62,20 +62,6 @@ function initializeLiff(myLiffId) {
         });
 }
  
-async function main(){
-    await liff.init({ liffId: "1655537264-qYjMWdwe"})
-    if (liff.isLoggedIn()){
-        getUserProfile()
-    } else {
-        liff.login()
-    }
-}
-main()
-
-async function getUserProfile(){
-    const profile = await liff.getUserProfile()
-    document.getElementById("pictureUrl").src = profile.picturUrl
-}
 
 /**
  * Initialize the app by calling functions handling individual app components
