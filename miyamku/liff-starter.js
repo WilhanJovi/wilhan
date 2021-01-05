@@ -173,7 +173,7 @@ function registerButtonHandlers() {
         } else {
             liff.sendMessages([{
                 'type': 'text',
-                'text': "Terimakasih ${namaLine}, sudah memesan "+_text
+                'text': "Terimakasih ${namaLine}, sudah memesan makanan"
             }]).then(function() {
                 window.alert('Ini adalah pesan dari fitur Send Message');
             }).catch(function(error) {
