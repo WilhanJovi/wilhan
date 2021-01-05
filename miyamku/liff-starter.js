@@ -172,8 +172,9 @@ function registerButtonHandlers() {
             sendAlertIfNotInClient();
         } else {
             liff.sendMessages([{
+                namaLine = profile.displayName;
                 'type': 'text',
-                'text': "Terimakasih ${namaLine}, sudah memesan makanan"
+                'text': "Terimakasih ${namaLine}, sudah memesan makanan Mie Ayam Kampus"
             }]).then(function() {
                 window.alert('Ini adalah pesan dari fitur Send Message');
             }).catch(function(error) {
@@ -194,7 +195,7 @@ function ExampleSendMessage(_text){
             'type': 'text',
             'text': `Terimakasih ${namaLine}, sudah memesan `+_text
         }]).then(function() {
-            window.alert('Ini adalah pesan dari fitur Send Message');
+            window.alert('Terimakasih sudah memesan');
         }).catch(function(error) {
             window.alert('Error sending message: ' + error);
         });
