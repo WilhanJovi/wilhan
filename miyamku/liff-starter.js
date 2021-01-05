@@ -1,7 +1,7 @@
 var namaLine;
 window.onload = function() {
     const useNodeJS = false;   // if you are not using a node server, set this value to false
-    const defaultLiffId = "isi id line liff";   // change the default LIFF value if you are not using a node server
+    const defaultLiffId = "1655537264-qYjMWdwe";   // change the default LIFF value if you are not using a node server
  
     // DO NOT CHANGE THIS
     let myLiffId = "";
@@ -132,7 +132,7 @@ function registerButtonHandlers() {
     // Kode ini menjelaskan apabila kita klik tombol open window, maka method liff.openWindow() akan dijalankan. Ganti parameter url dengan Endpoint URL aplikasi web yang sudah Anda deploy di Heroku atau lainnya. Sedangkan jika parameter external diisi dengan nilai true maka URL di jalankan pada external browser. Namun, jika diisi dengan nilai false maka URL akan dibuka pada browser LINE.
     document.getElementById('openWindowButton').addEventListener('click', function() {
         liff.openWindow({
-            url: 'https://mojajan1.herokuapp.com/', // Isi dengan Endpoint URL aplikasi web Anda
+            url: 'https://wilhanjovi.github.io/wilhan/miyamku', // Isi dengan Endpoint URL aplikasi web Anda
             external: true
         });
     });
@@ -170,7 +170,7 @@ function registerButtonHandlers() {
         } else {
             liff.sendMessages([{
                 'type': 'text',
-                'text': "Anda telah menggunakan fitur Send Message!"
+                'text': "Terimkasih telah memesan"
             }]).then(function() {
                 window.alert('Ini adalah pesan dari fitur Send Message');
             }).catch(function(error) {
