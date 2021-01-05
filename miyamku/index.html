@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Mie Ayam Kampus</title>
+</head>
+
+<body onload="MieAyamKampus();">
+
+        
+      <!-- Jumbotron -->
+      <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+        <br>
+          <h1 class="display-3"><span class="font-weight-bold">Mie Ayam Kampus</span></h1>
+          <p class="lead font-weight-light">Pesen dong Mas.. Enak Lho!!</p>
+        <br>
+        </div>
+      </div>
+      <div class="container">
+      <div class="row">
+
+      <div class="col" ng-controller="listContactCtrl">
+        <div id="page-main" class="well">
+            <br>
+            <img id="pictureUrl">
+            <p id="welcome" >Login Terlebih Dahulu Sebelum Memesan</p>
+      </div>
+      </div>
+
+        <!-- LOGIN LOGOUT BUTTONS -->
+        <div class="buttonGroup" style="position: relative; left: 7%;">
+            <div class="buttonRow">
+            <button id="liffLoginButton" class="btn btn-success btn-small">Log in</button>
+            <button id="liffLogoutButton" class="btn btn-warning btn-small">Log out</button>
+            </div>
+        </div>    
+
+      </div>
+      </div>
+      <br>
+      
+      <div class="container">
+          <div class="container">
+          <div class="row-md-3">
+          <div class="card border-dark text-center">
+              <img src="https://media.suara.com/pictures/970x544/2020/05/28/40379-sajian-mie-ayam-bakso-shutterstock.jpg" class="card-img-top" alt="Mie Ayam Bakso" width="360px">
+              <div class="card-body">
+                <h5 class="card-title font-weight-bold">Mie Ayam Bakso</h5>
+                    <div class="quantity">
+                    <button class="btn minus-btn" type="button">-</button>
+                    <input type="text" style="text-align:center" id="quantity" value="1">
+                    <button class="btn plus-btn" type="button">+</button>
+                    </div>
+
+                    <!--will calculate price---->
+                     <p class="total-price font-weight-bold">
+                     <span id="price" >15000</span>
+                    </p>
+              </div>
+        </div>
+        </div>
+        </div>  
+      </div>
+      <br><br>
+     
+      <div class="container">
+        <div class="container">
+        <div class="row-md-3">
+        <div class="card border-dark text-center">
+            <img src="https://s3.bukalapak.com/uploads/content_attachment/d1946b6716cf75ba59925da5/w-744/foto_thumbnail_mie_ayam.jpg" class="card-img-top" alt="Mie Ayam Ajah" width="360px">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Mie Ayam Ajah</h5>
+                  <div class="quantity2">
+                  <button class="btn minus-btn2" type="button">-</button>
+                  <input type="text" style="text-align:center" id="quantity2" value="1">
+                  <button class="btn plus-btn2" type="button">+</button>
+                  </div>
+
+                  <!--will calculate price---->
+                   <p class="total-price2 font-weight-bold">
+                   <span id="price2" >12000</span>
+                  </p>
+            </div>
+      </div>
+      </div>
+      </div>  
+      </div>
+      <br><br>
+
+      <div class="container">
+        <div class="container">
+        <div class="row-md-3">
+        <div class="card border-dark text-center">
+            <img src="https://truffle-assets.imgix.net/37158b9c-es-jeruk-lontar_lc_id.png" class="card-img-top" alt="Es Jeruk" width="360px">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Es Jeruk</h5>
+                  <div class="quantity3">
+                  <button class="btn minus-btn3" type="button">-</button>
+                  <input type="text" style="text-align:center" id="quantity3" value="1">
+                  <button class="btn plus-btn3" type="button">+</button>
+                  </div>
+
+                  <!--will calculate price---->
+                   <p class="total-price3 font-weight-bold">
+                   <span id="price3" >6000</span>
+                  </p>
+            </div>
+      </div>
+      </div>
+      </div>  
+      </div>
+      <br><br>
+
+      <div class="container">
+        <div class="container">
+        <div class="row-md-3">
+        <div class="card border-dark text-center">
+            <img src="https://2.bp.blogspot.com/-bSSOUonCpZM/VtkoBjI7gFI/AAAAAAAABBA/Io_4j1ejl-c/s1600/3832741634_0b82f0e4a5_b.jpg" class="card-img-top" alt="Es Teh Manis" width="360px">
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">Es Teh Manis</h5>
+                  <div class="quantity4">
+                  <button class="btn minus-btn4" type="button">-</button>
+                  <input type="text" style="text-align:center" id="quantity4" value="1">
+                  <button class="btn plus-btn4" type="button">+</button>
+                  </div>
+
+                  <!--will calculate price---->
+                   <p class="total-price4 font-weight-bold">
+                   <span id="price4" >4000</span>
+                  </p>
+            </div>
+      </div>
+      </div>
+      </div>  
+      </div>
+      <br> <hr> <br>
+
+      <div class="Pesanan">
+        <div class="container">
+            <div class="container">
+            <div class="row">
+            <div class="col">
+            <h6>Total Pesanan Kakak</h6> <h3 id="TotalPesan" style="font-weight: bolder"></h3>
+            </div>
+
+            <!--div class="colr"-->
+            <button id="sendMessageButton" class="btn btn-primary btn-small">Pesan Sekarang</button>
+            <!--/div-->
+            </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div> 
+
+    <br> <hr> <br>
+
+    <!--Konten LIFF v2-->
+ 
+    <div id="liffAppContent">
+        <!-- ACTION BUTTONS -->
+        <div class="buttonGroup">
+            <div class="buttonRow">
+                <!-- <button id="openWindowButton" class="btn btn-success btn-small">Open External Window</button> -->
+                <span id="closeWindowButton" ></span>
+                <!--<button id="sendMessageButton" class="btn btn-primary btn-small">Pesan Sekarang</button> -->
+            </div>
+
+        </div>
+
+        <!-- LIFF DATA -->
+        <div id="liffData">
+            <div class="container">
+            <p id="liffDataHeader" class="textLeft">Informasi:</p> 
+            <table>
+                <tr>
+                    <th>isInClient : </th> 
+                    <td id="isInClient" class="textLeft"></td>
+                </tr>
+                <tr>
+                    <th>isLoggedIn : </th> 
+                    <td id="isLoggedIn" class="textLeft"></td>
+                </tr>
+            </table>
+        </div>
+        </div>
+
+        <hr>
+
+        <div class="container">
+        <div class="col"></div>
+        <div id="statusMessage">
+            <div id="isInClientMessage"></div>
+            <button id="openWindowButton" class="btn btn-success btn-small" >Open External Window</button>
+            <div id="apiReferenceMessage">
+                <!-- <p>Available LIFF methods vary depending on the browser you use to open the LIFF app.</p>
+                <p>Please refer to the <ahref="https://developers.line.biz/en/reference/liff/#initialize-liff-app">API reference
+                        page</a> for more information.</p> -->
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- LIFF ID ERROR -->
+    <div id="liffIdErrorMessage" class="hidden">
+        <!-- <p>You have not assigned any value for LIFF ID.</p>
+        <p>If you are running the app using Node.js, please set the LIFF ID as an environment variable in your
+            Heroku account follwing the below steps: </p> -->
+        <code id="code-block">
+            <ol>
+                <!-- <li>Go to `Dashboard` in your Heroku account.</li>
+                <li>Click on the app you just created.</li>
+                <li>Click on `Settings` and toggle `Reveal Config Vars`.</li>
+                <li>Set `MY_LIFF_ID` as the key and the LIFF ID as the value.</li>
+                <li>Your app should be up and running. Enter the URL of your app in a web browser.</li> -->
+            </ol>
+        </code>
+        <!-- <p>If you are using any other platform, please add your LIFF ID in the <code>index.html</code> file.</p>
+        <p>For more information about how to add your LIFF ID, see <a
+                href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">Initializing the LIFF
+                app</a>.</p> -->
+    </div>
+    
+    <!-- LIFF INIT ERROR -->
+    <div id="liffInitErrorMessage" class="hidden">
+        <!-- <p>Something went wrong with LIFF initialization.</p>
+        <p>LIFF initialization can fail if a user clicks "Cancel" on the "Grant permission" screen, or if an error occurs in the process of <code>liff.init()</code>. -->
+    </div>
+
+    <!-- NODE.JS LIFF ID ERROR -->
+    <div id="nodeLiffIdErrorMessage" class="hidden">
+        <!-- <p>Unable to receive the LIFF ID as an environment variable.</p> -->
+    </div>
+
+
+    <br>
+
+    <script>
+        function loadMieAyamKampus(){
+        console.log("versi 3");
+        }
+    </script>
+
+    <script>
+        //setting default attribute to disabled of minus button
+        document.querySelector(".minus-btn").setAttribute;
+
+        //taking value to increment decrement input value
+        var valueCount
+
+        //taking price value in variable
+        var price = document.getElementById("price").innerText;
+
+        //price calculation function
+        function priceTotal() {
+            var total = valueCount * price;
+            document.getElementById("price").innerText = total
+        }
+
+        //plus button
+        document.querySelector(".plus-btn").addEventListener("click", function() {
+            //getting value of input
+            valueCount = document.getElementById("quantity").value;
+
+            //input value increment
+            valueCount++;
+
+            //setting increment input value
+            document.getElementById("quantity").value = valueCount;
+
+            if (valueCount > 0) {
+                document.querySelector(".minus-btn").removeAttribute("disabled");
+                document.querySelector(".minus-btn").classList.remove("disabled")
+            }
+
+            //calling price function
+            priceTotal()
+            TotalPesan()
+        })
+
+        //minus button
+        document.querySelector(".minus-btn").addEventListener("click", function() {
+            //getting value of input
+            valueCount = document.getElementById("quantity").value;
+
+            //input value increment by 1
+            valueCount--;
+
+            //setting increment input value
+            document.getElementById("quantity").value = valueCount
+
+            if (valueCount == 0) {
+                document.querySelector(".minus-btn").setAttribute("disabled", "disabled")
+            }
+
+            //calling price function
+            priceTotal()
+            TotalPesan()
+        })
+    </script>
+
+      <script>
+        //setting default attribute to disabled of minus button
+        document.querySelector(".minus-btn2").setAttribute;
+
+        //taking value to increment decrement input value
+        var valueCount
+
+        //taking price value in variable
+        var price2 = document.getElementById("price2").innerText;
+
+        //price calculation function
+        function priceTotal2() {
+            var total2 = valueCount * price2;
+            document.getElementById("price2").innerText = total2
+        }
+
+        //plus button
+        document.querySelector(".plus-btn2").addEventListener("click", function() {
+            //getting value of input
+            valueCount = document.getElementById("quantity2").value;
+
+            //input value increment
+            valueCount++;
+
+            //setting increment input value
+            document.getElementById("quantity2").value = valueCount;
+
+            if (valueCount > 0) {
+                document.querySelector(".minus-btn2").removeAttribute("disabled");
+                document.querySelector(".minus-btn2").classList.remove("disabled")
+            }
+
+            //calling price function
+            priceTotal2()
+            TotalPesan()
+        })
+
+        //minus button
+        document.querySelector(".minus-btn2").addEventListener("click", function() {
+            //getting value of input
+            valueCount = document.getElementById("quantity2").value;
+
+            //input value increment by 1
+            valueCount--;
+
+            //setting increment input value
+            document.getElementById("quantity2").value = valueCount
+
+            if (valueCount == 0) {
+                document.querySelector(".minus-btn2").setAttribute("disabled", "disabled")
+            }
+
+            //calling price function
+            priceTotal2()
+            TotalPesan()
+        })
+    </script>
+
+    <script>
+        //setting default attribute to disabled of minus button
+        document.querySelector(".minus-btn3").setAttribute;
+    
+        //taking value to increment decrement input value
+        var valueCount
+    
+        //taking price value in variable
+        var price3 = document.getElementById("price3").innerText;
+    
+        //price calculation function
+        function priceTotal3() {
+            var total3 = valueCount * price3;
+            document.getElementById("price3").innerText = total3
+        }
+    
+        //plus button
+        document.querySelector(".plus-btn3").addEventListener("click", function() {
+            //getting value of input
+            valueCount = document.getElementById("quantity3").value;
+    
+            //input value increment
+            valueCount++;
+    
+            //setting increment input value
+            document.getElementById("quantity3").value = valueCount;
+    
+            if (valueCount > 0) {
+                document.querySelector(".minus-btn3").removeAttribute("disabled");
+                document.querySelector(".minus-btn3").classList.remove("disabled")
+            }
+    
+            //calling price function
+            priceTotal3()
+            TotalPesan()
+        })
+    
+        //minus button
+        document.querySelector(".minus-btn3").addEventListener("click", function() {
+            //getting value of input
+            valueCount = document.getElementById("quantity3").value;
+    
+            //input value increment by 1
+            valueCount--;
+    
+            //setting increment input value
+            document.getElementById("quantity3").value = valueCount
+    
+            if (valueCount == 0) {
+                document.querySelector(".minus-btn3").setAttribute("disabled", "disabled")
+            }
+    
+            //calling price function
+            priceTotal3()
+            TotalPesan()
+        })
+    </script>
+    
+    <script>
+        //setting default attribute to disabled of minus button
+        document.querySelector(".minus-btn4").setAttribute;
+    
+        //taking value to increment decrement input value
+        var valueCount
+    
+        //taking price value in variable
+        var price4 = document.getElementById("price4").innerText;
+    
+        //price calculation function
+        function priceTotal4() {
+            var total4 = valueCount * price4;
+            document.getElementById("price4").innerText = total4
+        }
+    
+        //plus button
+        document.querySelector(".plus-btn4").addEventListener("click", function() {
+            //getting value of input
+            valueCount = document.getElementById("quantity4").value;
+    
+            //input value increment
+            valueCount++;
+    
+            //setting increment input value
+            document.getElementById("quantity4").value = valueCount;
+    
+            if (valueCount > 0) {
+                document.querySelector(".minus-btn4").removeAttribute("disabled");
+                document.querySelector(".minus-btn4").classList.remove("disabled")
+            }
+    
+            //calling price function
+            priceTotal4()
+            TotalPesan()
+        })
+    
+        //minus button
+        document.querySelector(".minus-btn4").addEventListener("click", function() {
+            //getting value of input
+            valueCount = document.getElementById("quantity4").value;
+    
+            //input value increment by 1
+            valueCount--;
+    
+            //setting increment input value
+            document.getElementById("quantity4").value = valueCount
+    
+            if (valueCount == 0) {
+                document.querySelector(".minus-btn4").setAttribute("disabled", "disabled")
+            }
+    
+            //calling price function
+            priceTotal4()
+            TotalPesan()
+        })
+    </script>
+    
+    <script>
+    
+        function TotalPesan() {
+
+
+            var TotPesan = parseInt(document.getElementById("price").innerText)+parseInt(document.getElementById("price2").innerText)+parseInt(document.getElementById("price3").innerText)+parseInt(document.getElementById("price4").innerText);
+            //console.log(TotPesan);//parseInt("15000") * price.value + parseInt("12000") * price2.value + parseInt("6000") * price3.value + parseInt("4000") * price4.value;
+        
+            document.getElementById("TotalPesan").innerText =TotPesan;
+        }
+
+        TotalPesan()
+    
+    </script>
+
+    <script>
+        async function main(){
+            await liff.init({ liffId: "1655537264-qYjMWdwe"})
+            if (liff.isLoggedIn()){
+                getUserProfile()
+            } else {
+                liff.login()
+            }
+        }
+        main()
+
+        async function getUserProfile(){
+            const profile = await liff.getUserProfile()
+            document.getElementById("pictureUrl").src = profile.picturUrl
+        }
+    </script>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+<script src="liff-starter.js"></script>
+</html>
