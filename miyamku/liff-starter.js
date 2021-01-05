@@ -1,3 +1,4 @@
+var picturepp;
 var namaLine;
 window.onload = function() {
     const useNodeJS = false;   // if you are not using a node server, set this value to false
@@ -61,6 +62,21 @@ function initializeLiff(myLiffId) {
         });
 }
  
+async function main(){
+    await liff.init({ liffId: "1655537264-qYjMWdwe"})
+    if (liff.isLoggedIn()){
+        getUserProfile()
+    } else {
+        liff.login()
+    }
+}
+main()
+
+async function getUserProfile(){
+    const profile = await liff.getUserProfile()
+    document.getElementById("pictureUrl").src = profile.picturUrl
+}
+
 /**
  * Initialize the app by calling functions handling individual app components
  * Function initializeApp di atas menjelaskan bahwa isLoggedIn akan menampilkan informasi pengguna serta mengecek apakah pengguna membuka aplikasi LIFF pada LINE atau eksternal browser. Apabila pengguna membuka aplikasi LIFF pada LINE maka tombol Login dan Logout tidak akan ditampilkan. Namun apabila melalui eksternal browser, maka tombol login dan logout akan ditampilkan.
@@ -77,8 +93,10 @@ function initializeApp() {
         // document.getElementById('page-main').style.visibility= "hidden";
         liff.getProfile() 
         .then(profile => {
+            picturepp = profile.pictureURL;
             namaLine = profile.displayName;
-            document.getElementById("welcome").innerHTML = `halo ${namaLine}, silahkan pilih menu `;
+            document.getElementById("picturepp");
+            document.getElementById("welcome").innerHTML = `Halo Kak ${namaLine}, silahkan pilih menu `;
         })
         .catch((err) => {
           console.log('error', err);
@@ -170,7 +188,7 @@ function registerButtonHandlers() {
         } else {
             liff.sendMessages([{
                 'type': 'text',
-                'text': `Terimakasih ${namaLine}, sudah memesan `+_TotalPesan
+                'text': "Terimakasih ${namaLine}, sudah memesan "+_text
             }]).then(function() {
                 window.alert('Ini adalah pesan dari fitur Send Message');
             }).catch(function(error) {
